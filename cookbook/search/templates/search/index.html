@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipe Search</title>
+        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}" />
+        <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Kalam|Patrick+Hand|Shadows+Into+Light" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Tìm Kiếm Công Thức Nấu Ăn</h1>
+        </div>
+
+        <section id="first">
+        <div class="frame">
+            <form action='/search/#second' method="get">
+                {% csrf_token %}
+                <table class="form">
+                   {% for field in form %}
+                  <tr><td>{{ field.label_tag }} {{field}} {{field.help_text}}</td></tr>
+                  {% endfor %}
+                </table>
+                <input type="submit" value="Tìm Kiếm" />
+            </form>
+
+        </div>
+
+       </section>      
+                    
+        
+        <section id="second">
+            <div class="query"> Bạn đang tìm kiếm món ăn với nguyên liệu {{food_query}}</div>  
+            {% if res %}
+            <table class="recipe">
+
+            <tr>
+                <!-- <th>Image</th> -->
+                <th>Tên món ăn</th>
+                <th>Nguyên liệu</th>
+                <th>Hướng dẫn</th>
+
+            </tr>
+
+            {% for a, b, c, d in res %}
+            <tr>
+                <!-- <td><img src= "{{ d }}" width="300" height="200"></td> -->
+                <td>{{ a }}</td>
+                <td>{{ b }}</td>
+                <td>{{ c }}</td>
+            </tr>
+            {% endfor %}   
+            </table> 
+            <div class="numresults">Number of results: {{ num_char }}</div>
+            </section>            
+            {% endif %}
+     
+    </body>
+</html>

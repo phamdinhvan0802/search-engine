@@ -1,0 +1,111 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand', cursive;
+}
+
+div.header {
+    background: #F0F8FF;
+    padding: 5px;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+}
+
+div.header h1 {
+    font-size: 50px;
+    margin: 0;
+    padding: 7px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+div.frame {
+    margin-top: 140px;
+}
+
+div.query {
+    font-size: 25px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    font-family: 'Caveat Brush', cursive;
+}
+
+div.numresults {
+    font-family: 'Patrick Hand', cursive;
+    margin-top: 15px;
+}
+
+table.form{
+    width:100%;
+    margin:0 auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    border-spacing: 15px;
+}
+
+table.form tr td{
+    font-size: 35px;
+    font-family: 'Caveat Brush', cursive;
+}
+
+
+table.recipe tr th{
+    font-size:25px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+table.recipe tr td{
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+table.recipe tr:nth-child(odd) {
+    background-color: #708090;
+    color: white;
+}
+table.recipe tr:nth-child(even) {
+    background-color: #F8F8FF;
+    color: black;
+}
+
+input[type=submit] {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 6px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    font-family: 'Caveat Brush', cursive;
+}
+
+input[type=submit]:hover{
+    background-color: grey;
+}
+
+section {
+    min-height: 100%; 
+    padding-top: 75px; 
+    padding-bottom: 25px; 
+    text-align: center; 
+}
+
+#first{
+    background-image: url("https://redfynn-gt7rmksqqwq7f30mi.netdna-ssl.com/wp-content/uploads/2016/08/home-italian-food-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
